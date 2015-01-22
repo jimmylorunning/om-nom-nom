@@ -1,9 +1,11 @@
 OmNomNom::Application.routes.draw do
+  root to: 'poses#index'
   get "poses/new"
   get "poses/index"
   get "poses/create"
   devise_for :users
   resources :poses
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

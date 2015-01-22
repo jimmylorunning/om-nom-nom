@@ -1,2 +1,7 @@
 <h1>Poses#index</h1>
-<p>Find me in app/views/poses/index.html.erb</p>
+<ul>
+<% @poses.each do |pose| %>
+  <li><%= link_to pose.name, pose_path(pose) %></li>
+<% end %>
+</ul>
+<%= link_to 'Add Pose', new_pose_path, class: 'btn btn-default' %>
