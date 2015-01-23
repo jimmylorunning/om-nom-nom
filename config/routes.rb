@@ -1,10 +1,15 @@
 OmNomNom::Application.routes.draw do
+  get "routines/new"
+  get "routines/index"
+  get "routines/show"
+  get "routines/edit"
   root to: 'poses#index'
   get "poses/new"
   get "poses/index"
   get "poses/create"
   devise_for :users
   resources :poses
+  resources :routines
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

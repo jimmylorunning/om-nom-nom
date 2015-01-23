@@ -14,6 +14,10 @@ class PosesController < ApplicationController
     redirect_to poses_path 
   end
 
+  def show
+    @pose = Pose.find_by_id(params[:id])
+  end
+
   private
 
     def post_params

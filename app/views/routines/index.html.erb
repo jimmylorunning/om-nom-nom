@@ -1,0 +1,6 @@
+<h1>Routines#index</h1>
+<ul>
+<% @routines.each do |routine| %>
+  <li><%= link_to routine.name, routine_path(routine) %></li>
+<% end %>
+</ul>
